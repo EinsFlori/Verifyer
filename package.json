@@ -1,0 +1,16 @@
+{
+    "name": "verifyer",
+    "version": "1.0.0",
+    "description": "",
+    "main": "start.js",
+    "author": "544541234937462795",
+    "license": "ISC",
+    "dependencies": {
+        "@discordjs/opus": "^0.5.3",
+        "better-sqlite3": "^7.4.3",
+        "discord.js": "^12.5.3",
+        "discordbot-script": "^3.0.4",
+        "ffmpeg-static": "^4.4.0",
+        "ytdl-core": "^4.8.2"
+    }
+}
