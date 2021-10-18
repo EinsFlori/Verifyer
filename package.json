@@ -2,7 +2,7 @@
     "name": "verifyer",
     "version": "1.0.0",
     "description": "",
-    "main": "start.js",
+    "main": "index.js",
     "author": "544541234937462795",
     "license": "ISC",
     "dependencies": {
