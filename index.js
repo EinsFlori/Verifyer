@@ -1,7 +1,8 @@
 const Dlang = require('discordbot-script');
+const fs = require('fs')
 const bot = new Dlang({
 token: "TOKEN",
-prefix: ["$getServerVar[prefix]"]
+prefix: "$getServerVar[prefix]"
 
 })
 bot.Variables({
@@ -462,7 +463,6 @@ $cooldown[24h;You can spin the wheel of fortune every 24 hours.Remaining time: {
 `
 })
 
-
 bot.Command({
 name: "guilds",
 code: `
@@ -471,17 +471,14 @@ $onlyForUsers[544541234937462795;346952827970781185;no]
 `
 })
 
-
 bot.Command({
      name: "setlog",
     code: `
     $setServerVar[log;$message[]]
     $onlyAdmin[Only admins can set the Log channel]
         `
-        })
+})
 
-
-            const fs = require('fs') 
             const events = fs.readdirSync("./events/");
             for (const Files of events) {
                 const eventFile = fs.readdirSync(`./events/${Files}/`).filter(file => file.endsWith(".js"))
@@ -509,19 +506,20 @@ bot.Command({
                     console.log(`Loaded Event: ${event}`);
                 }
             }
-            bot.onBan();
-            bot.onUnban();
-            bot.onBotJoin();
-            bot.onBotLeave();
-            bot.onChannelCreate();
-            bot.onChannelDelete();
-            bot.onEmojiCreate();
-            bot.onEmojiDelete(),
-            bot.onGuildUpdate();
-            bot.onJoined();
-            bot.onLeave();
-            bot.onMessageDelete();
-            bot.onRateLimit();
-            bot.onRoleCreate();
-            bot.onRoleDelete();
-            bot.onUserUpdate();
+
+bot.onBan();
+bot.onUnban();
+bot.onBotJoin();
+bot.onBotLeave();
+bot.onChannelCreate();
+bot.onChannelDelete();
+bot.onEmojiCreate();
+bot.onEmojiDelete(),
+bot.onGuildUpdate();
+bot.onJoined();
+bot.onLeave();
+bot.onMessageDelete();
+bot.onRateLimit();
+bot.onRoleCreate();
+bot.onRoleDelete();
+bot.onUserUpdate();
