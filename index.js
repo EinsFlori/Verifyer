@@ -376,15 +376,6 @@ $addTimestamp
 `
 })
 
-
-bot.Command({
-    name: "luca",
-    code: `
-Luca is kaka
-`
-})
-
-
 bot.Command({
     name: "work",
     code: `
